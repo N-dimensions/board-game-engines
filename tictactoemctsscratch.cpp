@@ -281,7 +281,7 @@ int findbest(unsigned int movepl, unsigned int boardpos, const vector<int>& choi
 	cout<<"Board best: "<<boardbest<<endl;
 	for(i=0;i<choices.size();i++)
 	{
-		cout<<"Choices size: "<<choices.size()<<endl;
+		//cout<<"Choices size: "<<choices.size()<<endl;
 		k[choices[i]]=2-movepl%2;
 		//cout<<choices[i]<<endl;
 		//cout<<choices[i];
