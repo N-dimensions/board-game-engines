@@ -8,6 +8,11 @@ help()                 -> will give list of all commands (only 7 including help(
 play_start().ON        -> to play against the engine from start (toggle to OFF if you don't want engine analysis) <br/>
 play_from().ON         -> to play against the engine from specified position (same thing for toggling) <br/>
                           after passing the command you have to specify the position. <br/>
+how to give position? <br/>
+position has to be a 9 character long string, first 3 characters represent <br/>
+the top row, next 3 represent the middle row, last 3 represent the last row <br/>
+char "X" denotes X at the position, char "O" denotes O at the position, <br>
+char "_" denotes unoccupied position. 
 analyse()              -> to get engine analysis for a particular position, after passing the command you have to specify the position.<br/>
 set playouts_primary   -> setting primary playouts (see analyse function's working) default 10 (specify after passing command) <br/>
 set playouts_secondary -> setting secondary playouts (see analyse function's working) default 10 (specify after passing command) <br/>
