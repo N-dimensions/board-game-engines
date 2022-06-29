@@ -48,7 +48,7 @@ int play(int move, char* FENtmpPar, int mvno)
 	}
 	else
 	{
-		std::cerr << "Error 001: The program inherited an invalid move";
+		std::cerr << "Error 001: The program inherited an invalid move"<<std::endl;
 	}
 	return 0;
 }
@@ -217,6 +217,7 @@ int fd_child_nodes(Position* present, std::unordered_map<std::string, Position>&
 			count++;
 		}
 	}
+	//std::cout << "henno";
 	next.FEN = present->FEN;
 	//std::cout << "value of *next.FEN*: " << next.FEN <<std::endl;
 	if (count % 2 == 1)
@@ -280,7 +281,7 @@ int fd_child_nodes(Position* present, std::unordered_map<std::string, Position>&
 int explore_aor_best_continuation(Position** history, int mvpld, int mv_rand_play, bool fd_continuation)
 {
 	int i = 0, j = 0;
-	int index_number=-1;
+	int index_number=0;
 	float exp_tendency=0;
 	for (i = 0; i < 9-mvpld; i++)
 	{
@@ -304,7 +305,7 @@ int explore_aor_best_continuation(Position** history, int mvpld, int mv_rand_pla
 int fd_best_play(Position** history, int mvpld, int mv_rand_play)
 {
 	int i = 0, j = 0;
-	int index_number = -1;
+	int index_number = 0;
 	float win_tendency = -1;
 	for (i = 0; i < 9 - mvpld; i++)
 	{
@@ -315,8 +316,9 @@ int fd_best_play(Position** history, int mvpld, int mv_rand_play)
 			//play_rand_frm(history, mvpld + 1, mv_rand_play);
 			//history[mvpld]->child[i]->explored = true;
 		//}
-		std::cout << "The move being judged: " << history[mvpld]->child[i]->FEN << " -> " << history[mvpld]->child[i]->w<<"/"<<history[mvpld]->child[i]->N;
+		/*std::cout << "The move being judged: " << history[mvpld]->child[i]->FEN << " -> " << history[mvpld]->child[i]->w << "/" << history[mvpld]->child[i]->N;
 		std::cout << "-> Probability: " << history[mvpld]->child[i]->w / history[mvpld]->child[i]->N<<std::endl;
+		*/
 		if (history[mvpld]->child[i]->w / history[mvpld]->child[i]->N > win_tendency && history[mvpld]->child[i]->N<INFINITY)
 		{
 			win_tendency = history[mvpld]->child[i]->w / history[mvpld]->child[i]->N;
