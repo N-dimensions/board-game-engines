@@ -70,7 +70,7 @@ bool analyse(std::string posn, bool analyse_prnt = true, bool mode_play = false,
 			if (analyse_prnt)
 			{
 				std::cout << std::endl;
-				std::cout << "The final outcome considering, perfect players is inescapable ";
+				std::cout << "The final outcome considering, perfect players, is inescapable ";
 				if (win(historytmp[mvpld]->child[best]->FEN) == -1)
 				{
 					marker = 'X';
@@ -242,7 +242,7 @@ bool text_recognizer(std::string command, int *playouts_primary, int *playouts_s
 		std::string start;
 		std::cout << ">> ";
 		std::cin >> start;
-		analyse(start, true, false, nullptr , 10, 10);
+		analyse(start, true, false, nullptr , *playouts_primary, *playouts_primary);
 		return true;
 	}
 	if (command == "set playouts_primary")
@@ -269,7 +269,7 @@ int main()
 	std::string command;
 	int playouts_primary=10, playouts_secondary=10;
 	bool ready = true;
-	std::cout << "Tic-Tac-Toe engine (2022) version 1.0.0 by GKI" << std::endl;
+	std::cout << "Tic-Tac-Toe engine (2022) version 1.0.0 by N-dimensions" << std::endl;
 	std::cout << "=================================================" << std::endl;
 	while (ready)
 	{
