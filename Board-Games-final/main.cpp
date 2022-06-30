@@ -127,7 +127,7 @@ int play_against(char FEN[], bool analyse_prnt, int playouts_primary, int playou
 		}
 	}
 	board = FEN;
-	std::cout << "Marker of the opponent: ";
+	std::cout << "Marker of the opponent: >> ";
 	std::cin >> marker;
 	if (marker != 'O' && marker != 'X')
 	{
@@ -147,6 +147,7 @@ int play_against(char FEN[], bool analyse_prnt, int playouts_primary, int playou
 	}
 	while (true)
 	{
+		std::cout << ">> ";
 		std::cin >> playmv;
 		play(playmv, FEN, mv);
 		board = FEN;
