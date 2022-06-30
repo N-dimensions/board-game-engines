@@ -15,7 +15,7 @@ char "X" denotes X at the position, char "O" denotes O at the position, <br/>
 char "_" denotes unoccupied position. <br/> <br/>
 how to play against the engine? <br/>
 just type the position of the char in the position string (which starts from 0) <br/>
-example, input of 0 at _________ will make it X________.
+example, input of 0 at _________ will make it X________. <br/> <br/>
 analyse()              -> to get engine analysis for a particular position, after passing the command you have to specify the position.<br/>
 set playouts_primary   -> setting primary playouts (see analyse function's working) default 10 (specify after passing command) <br/>
 set playouts_secondary -> setting secondary playouts (see analyse function's working) default 10 (specify after passing command) <br/>
