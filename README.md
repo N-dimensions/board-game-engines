@@ -1,7 +1,7 @@
 # Tic-Tac-Toe-engine
 Consists of MCTS implementation on Tic-Tac-Toe <br/>
 the engine has various commands which allows you to <br/>
-play against it from given position, analyse different positions and also specify details. (Preffered Compiler MSVC) <br/>
+play against it from given position, analyse different positions and also specify details. (Preffered Compiler - MSVC) <br/>
 It uses MCTS (Monte Carlo Tree Search) where it conducts random playouts in a systematic manner. <br/>
 commands work as follows <br/>
 help()                 -> will give list of all commands (only 7 including help()...) <br/>
